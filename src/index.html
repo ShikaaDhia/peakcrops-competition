@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Peak Crops</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="../public/output.css" />
+  <link rel="icon" type="image/png" href="../assets/asset/logo.svg">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Swipper -->
+  <link rel="stylesheet" href="../public/swiper-bundle.min.css">
+
+  <!-- Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="py-8 lg:pt-6 lg:pb-14 bg-[#FFFDF4]">
+    <div class="container mx-auto lg:relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0">
+      <!-- Logo -->
+      <div class="flex justify-center lg:justify-normal">
+        <a href="" class="flex-col items-center px-[20px] w-max gap-x-2 mx-auto xl:mx-0">
+          <img src="../assets/asset/logo.svg" alt="" class="items-center mx-auto">
+          <div class="text-base text-title xl:text-[30px] text-[25px] tracking-[2.24px] font-semibold mt-1">PeakCrops
+          </div>
+        </a>
+      </div>
+      <div class="flex flex-col gap-y-[30px] lg:flex-row lg:gap-x-10 lg:gap-y-0 mt-3">
+        <a href="login.html">
+          <button
+            class="btn btn-sm bg-secondary text-white rounded-[14px] w-[240px] lg:w-auto mx-auto lg:mx-0 shadow-2xl transition-all duration-500 z-9 hover:bg-transparent hover:border-secondary hover:text-secondary hover:border-[2px]">
+            Sign In
+          </button>
+        </a>
+        <a href="register.html">
+          <button
+            class="btn btn-sm border-[2px] bg-transparent border-primary rounded-[14px] w-[240px] lg:w-auto mx-auto lg:mx-0 shadow-2xl transition-all duration-500 z-9 hover:bg-primary hover:text-white">
+            Sign Up
+          </button>
+        </a>
+      </div>
+
+      <!-- Social Media -->
+      <div class="flex gap-x-4 items-center container mx-auto lg:hidden mt-4 justify-center">
+        <div
+          class="bg-[#FFC973] rounded-full w-[50px] h-[50px] items-center py-[9px] px-[13px] hover:bg-primary transition-all duration-300">
+          <a href=""><i
+              class="ri-instagram-line text-2xl text-primary hover:text-white items-center text-center"></i></a>
+        </div>
+        <div
+          class="bg-[#FFC973] rounded-full w-[50px] h-[50px] items-center py-[9px] px-[13px] hover:bg-primary transition-all duration-300">
+          <a href=""><i
+              class="ri-twitter-x-line text-2xl text-primary hover:text-white items-center text-center"></i></a>
+        </div>
+        <div
+          class="bg-[#FFC973] rounded-full w-[50px] h-[50px] items-center py-[9px] px-[13px] hover:bg-primary transition-all duration-300">
+          <a href=""><i
+              class="ri-facebook-line text-2xl text-primary hover:text-white items-center text-center"></i></a>
+        </div>
+      </div>
+
+      <!-- Nav Mobile -->
+      <nav class="mnav bg-white fixed w-[300px] top-0 h-screen -left-[300px] lg:hidden">
+        <div class="mnav__close-btn bg-primary w-8 h-8 relative -right-full
+            top-8 flex justify-center items-center rounded-tr-lg rounded-br-lg">
+
+          <i class="mnav__close-btn-icon ri-arrow-right-s-line text-2xl text-white"></i>
+        </div>
+        <!-- Logo List Form -->
+        <div class="px-12 flex flex-col gap-y-12 h-full">
+          <!-- logo -->
+          <a href="">
+            <img src="../assets/asset/logo.svg" alt="" class="items-center mx-auto">
+            <div
+              class="text-base text-center text-title xl:text-[30px] text-[25px] tracking-[2.24px] font-semibold mt-1">
+              PeakCrops
+            </div>
+          </a>
+          <!-- Form -->
+          <ul class="flex flex-col gap-y-5">
+            <li>
+              <a href="#hero" class="text-title hover:text-accent transition-all duration-300">Home</a>
+            </li>
+            <li>
+              <a href="#service" class="text-title hover:text-accent transition-all duration-300">Shop</a>
+            </li>
+            <li>
+              <a href="#causes" class="text-title hover:text-accent transition-all duration-300">Plants</a>
+            </li>
+            <li>
+              <a href="#testimonial" class="text-title hover:text-accent transition-all duration-300">About</a>
+            </li>
+            <li>
+              <a href="#volunteer" class="text-title hover:text-accent transition-all duration-300">Collection</a>
+            </li>
+          </ul>
+          <!-- Form -->
+          <form action="" class="relative flex gap-x-[10px]">
+            <label for="">
+              <i class="ri-search-line text-2xl text-accent"></i>
+            </label>
+            <input type="text" id="nav-search-input" placeholder="Search..."
+              class="outline-none w-[160px] border-b-2 focus:border-b-2 focus:border-accent placeholder:italic">
+          </form>
+        </div>
+      </nav>
+      <nav
+        class="bg-white absolute w-full left-0 -bottom-[86px] shadow-custom1 h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-between pr-4 lg:px-[50px]">
+        <!-- List -->
+        <ul class="flex gap-x-4">
+          <li>
+            <a href="#hero" class=" border-r pr-4 text-title hover:text-primary transition-all duration-300">Home</a>
+          </li>
+          <li>
+            <a href="#sevice" class=" border-r pr-4 text-title hover:text-primary transition-all duration-300">Shop</a>
+          </li>
+          <li>
+            <a href="#causes"
+              class=" border-r pr-4 text-title hover:text-primary transition-all duration-300">Plants</a>
+          </li>
+          <li>
+            <a href="#testimonial"
+              class=" border-r pr-4 text-title hover:text-primary transition-all duration-300">About</a>
+          </li>
+          <li>
+            <a href="#volunteer"
+              class=" border-r pr-4 text-title hover:text-primary transition-all duration-300">Collection</a>
+          </li>
+        </ul>
+        <!-- Form -->
+        <form class="relative flex gap-y-[10px]">
+          <label for="search-input" class="flex justify-center items-center group">
+            <i class="ri-search-line text-2xl text-accent"></i>
+          </label>
+          <input type="text" id="search-input" placeholder="Search..."
+            class="outline-none w-[100px] focus:w-[180px] focus:border-b-2 focus:border-accent placeholder:italic placeholder:text-base transition-all duration-500">
+        </form>
+      </nav>
+  </header>
+  <!-- End Header -->
+
+  <!-- Hero -->
+  <section class="hero xl:bg-homeBg bg-grey py-12 xl:pt-0 xl:pb-12 overflow-hidden xl:h-[900px] bg-no-repeat bg-cover"
+    id="hero">
+    <div class="container mx-auto h-full ">
+      <!-- Text Img -->
+      <div class="flex flex-col xl:flex-row items-center justify-between h-full">
+        <!-- Text -->
+        <div class="hero__text xl:w-[48%] text-center xl:text-left">
+
+          <!-- Title -->
+          <p class="text-[#797979] text-[12px] xl:text-[13px]">WELCOME TO PEAKCROPS</p>
+          <h1 class="h1 mb-6 text-title font-primary">Best <span class="text-secondary font-tertiary">Plants</span> 🌱
+            <br>
+            Collection For
+            <span class="xl:text-primary text-primary font-tertiary" style="padding: 0px; background: linear-gradient(
+              to bottom,
+              transparent 70%,
+              #FFC973 45%
+            );">
+              <br>
+              Freshness</span> In Your Home.
+          </h1>
+          <!-- Desc -->
+          <p class="mb-[42px] md:max-w-xl text-[#797979] font-secondary">
+            Discover the joy of bringing nature indoors with our selection of fresh and beautiful plants, delivered
+            directly to your doorstep for effortless home decoration.
+          </p>
+          <!-- btn -->
+          <div class="flex xl:flex-row flex-col gap-y-5 xl:gap-y-0 xl:gap-x-[25px] mx-auto mt-2 text-title">
+            <button
+              class="btn btn-sm bg-black text-white font-medium rounded-[14px] text-[18px] hover:bg-transparent hover:border-[2px] hover:border-black hover:text-black transition-all duration-500">About
+              Us<i class="ri-arrow-right-line ml-3"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <!-- Service -->
+  <section id="service" class="section xl:py-[3px]">
+    <div class="container mx-auto mt-8 xl:-mt-[144px]">
+      <!-- grid -->
+      <div class="grid xl:grid-cols-4 gap-5 xl:gap-0 px-8 xl:px-0">
+
+        <!-- Grid Item -->
+        <div class="services__item bg-white p-[20px] min-h-[288px]: flex flex-col items-center text-center shadow-xl"
+          style="border-radius: 24px 0 0 24px;" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1">
+          <!-- Grid Item Icon -->
+          <img src="../assets/asset/box.png" alt="" class="p-3">
+          <!-- Grid Item Title -->
+          <h3 class="h5 mb-[10px] text-title font-medium">Discount</h3>
+          <!-- Grid Item Desc -->
+          <p class="font-light leading-normal max-w-[300px] text-[#9A9CAA]">Every week new sales</p>
+        </div>
+
+        <!-- Grid Item -->
+        <div class="services__item bg-white p-[30px] min-h-[288px]: flex flex-col items-center text-center shadow-xl"
+          data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1">
+          <!-- Grid Item Icon -->
+          <img src="../assets/asset/delivery-truck.png" alt="" class="p-3">
+          <!-- Grid Item Title -->
+          <h3 class="h5 mb-[10px] text-title font-medium">Free Delivery</h3>
+          <!-- Grid Item Desc -->
+          <p class="font-light leading-normal max-w-[300px] text-[#9A9CAA]">100% Free for all orders</p>
+        </div>
+
+        <!-- Grid Item -->
+        <div class="services__item bg-white p-[20px] min-h-[288px]: flex flex-col items-center text-center shadow-xl"
+          data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1">
+          <!-- Grid Item Icon -->
+          <img src="../assets/asset/24-hours.png" alt="" class="p-3">
+          <!-- Grid Item Title -->
+          <h3 class="h5 mb-[10px] text-title font-medium">Great Support 24/7</h3>
+          <!-- Grid Item Desc -->
+          <p class="font-light leading-normal max-w-[300px] text-[#9A9CAA]">We care your experiences</p>
+        </div>
+
+        <!-- Grid Item -->
+        <div class="services__item bg-white p-[20px] min-h-[288px]: flex flex-col items-center text-center shadow-xl"
+          style="border-radius: 0 24px 24px 0;" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1">
+          <!-- Grid Item Icon -->
+          <img src="../assets/asset/shield.png" alt="" class="p-3">
+          <!-- Grid Item Title -->
+          <h3 class="h5 mb-[10px] text-title font-medium">Secure Payment</h3>
+          <!-- Grid Item Desc -->
+          <p class="font-light leading-normal max-w-[300px] text-[#9A9CAA]">100% Secure Payment Method</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Service -->
+
+  <!-- BA -->
+  <div class="brands mt-[10px] xl:mt-[10px]">
+    <div class="container mx-auto">
+      <div class="flex flex-col xl:flex-row gap-y-[50px] xl:gap-y-0 justify-between items-center">
+        <img src="../assets/asset/zapier.png" alt="">
+        <img src="../assets/asset/pipedrive.png" alt="">
+        <img src="../assets/asset/cibank.png" alt="">
+        <img src="../assets/asset/zebra.png" alt="">
+        <img src="../assets/asset/burnt-toast.png" alt="">
+        <img src="../assets/asset/panda-doc.png" alt="">
+        <img src="../assets/asset/moz.png" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- End BA -->
+
+  <!-- BEST -->
+  <section class="xl:mt-[90px] mt-[40px] mx-auto justify-center items-center">
+    <div class="container mx-auto flex flex-col xl:flex-row justify-center items-center">
+      <div class="mx-auto justify-center items-center">
+        <img src="../assets/asset/plant section3.png" alt=""
+          class="w-[100%] xl:w-[100%] mx-auto justify-center items-center">
+      </div>
+      <div class="font-semibold mx-auto mt-[30px]">
+        <h1 class="h1 xl:text-left text-center text-title xl:ml-[100px]">What’s Best From
+          Our <span class="font-tertiary text-primary">Plants</span></h1>
+
+        <p
+          class="text-center font-secondary text-title font-normal mt-[24px] xl:text-left xl:ml-[100px] xl:text-[20px]">
+          <span class="font-semibold">Beautiful Homes and Healthy Air:</span>
+          Houseplants enhance your home's beauty while absorbing air pollution and releasing fresh oxygen for you to
+          breathe.
+        </p>
+        <p
+          class="text-center font-secondary text-title font-normal mt-[16px] xl:text-left xl:ml-[100px] xl:text-[20px]">
+          <span class="font-semibold">Eco-Friendly Fuel:</span>
+          Plants are a source of renewable biofuel, an environmentally friendly alternative to fossil fuels
+        </p>
+
+        <div class="flex flex-col xl:flex-row xl:mt-[30px] xl:ml-[100px]">
+          <button
+            class="btn btn-sm bg-black text-white font-normal font-secondary rounded-full hover:bg-transparent hover:border-[2px] hover:border-black hover:text-black transition-all duration-500  mt-[20px] xl:mr-[26px]">Shop
+            Plant<i class="ri-arrow-right-line ml-3"></i></button>
+          <button
+            class="btn btn-sm bg-transparent text-black font-normal font-secondary border-[2px] border-black rounded-full  hover:bg-black hover:border-none hover:text-white transition-all duration-500  mt-[20px]">Read
+            More<i class="ri-arrow-right-line ml-3"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End BEST -->
+
+  <!-- Start Gardening-->
+  <section
+    class="xl:bg-startgardeningBg bg-grey py-12 xl:pt-0 xl:pb-12 overflow-hidden xl:h-[438px] bg-no-repeat bg-cover xl:mt-[80px]">
+    <div class="flex flex-col xl:flex-row mx-auto xl:mt-[70px]">
+      <div class="">
+        <h1
+          class="font-tertiary font-semibold xl:text-white text-title text-center xl:text-left text-[30px] xl:text-[68px] xl:ml-[86px]">
+          Start Gardening <br>
+          And Grow Your <br> Own Plant!</h1>
+      </div>
+      <div>
+        <img src="../assets/asset/taneman-bulet.png" alt="" class="xl:w-[80%] w-[70%] mx-auto mt-[25px]">
+      </div>
+      <div>
+        <p class="font-semibold font-secondary xl:text-white text-title text-[20px] xl:text-[30px] text-center xl:text-left mt-[20px]"
+          style="line-height: 40px;">Are you looking for plants? <span style="padding: 0px; background: linear-gradient(
+          to bottom,
+          transparent 70%,
+          #FFC973 45%
+        );">PeakCrops</span> <br> provides the best for you.</p>
+        <button
+          class="btn btn-sm bg-[#ebebeb] text-black font-medium font-secondary border-[2px] xl:mx-0 mx-auto xl:border-white rounded-full mt-[20px] xl:mt-[50px]"
+          style="box-shadow: 0px 6.67px 26.681px 0px rgba(0, 0, 0, 0.35) inset;">Read
+          More</button>
+      </div>
+  </section>
+  <!-- End Start Gardening-->
+
+  <!-- Collection -->
+  <section
+    class="section xl:bg-collectionBg bg-grey py-12 xl:pt-0 xl:pb-12 overflow-hidden xl:h-[900px] bg-no-repeat bg-cover">
+    <div class="container mx-auto xl:mt-[150px] justify-center items-center">
+      <div>
+        <p
+          class="h4 font-primary font-semibold text-center text-[25px] text-title xl:text-left xl:text-[20px] xl:mt-[20px]">
+          BEST COLLECTION</p>
+      </div>
+      <div class="flex flex-col xl:flex-row justify-center items-center mx-auto">
+        <div class="mt-[25px] justify-center items-center mx-auto">
+          <div class="justify-center items-center mx-auto">
+            <img src="../assets/asset/gantung.png" alt="" class="shadow-custom1 xl:w-[90%]">
+          </div>
+          <div class="flex gap-[120px] mt-[20px]">
+            <div>
+              <h3 class="font-medium">Hanging Plants</h3>
+              <p class="font-semibold">$20</p>
+            </div>
+            <div>
+              <div
+                class="bg-accent pt-1 pl-3 rounded-xl w-[41px] h-[41px] mx-auto items-center align-middle justify-center hover:bg-primary transition-all duration-3000">
+                <i class="ri-shopping-cart-2-line text-white text-center"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-[25px]">
+          <div>
+            <img src="../assets/asset/cactus.png" alt="" class="shadow-custom1 xl:w-[90%]">
+          </div>
+          <div class="flex gap-[120px] mt-[20px]">
+            <div>
+              <h3 class="font-medium">Cactus Australia</h3>
+              <p class="font-semibold">$90</p>
+            </div>
+            <div>
+              <div
+                class="bg-accent pt-1 pl-3 rounded-xl w-[41px] h-[41px] mx-auto items-center align-middle justify-center hover:bg-primary transition-all duration-3000">
+                <i class="ri-shopping-cart-2-line text-white text-center"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-[25px]">
+          <div>
+            <img src="../assets/asset/heaven.png" alt="" class="shadow-custom1 xl:w-[90%]">
+          </div>
+          <div class="flex gap-[120px] mt-[20px]">
+            <div>
+              <h3 class="font-medium">Little Heaven</h3>
+              <p class="font-semibold">$870</p>
+            </div>
+            <div>
+              <div
+                class="bg-accent pt-1 pl-3 rounded-xl w-[41px] h-[41px] mx-auto items-center hover:bg-primary transition-all duration-3000">
+                <i class="ri-shopping-cart-2-line text-white text-center"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-[25px]">
+          <div>
+            <img src="../assets/asset/bonsai.png" alt="" class="shadow-custom1 xl:w-[90%]">
+          </div>
+          <div class="flex gap-[120px] mt-[20px]">
+            <div>
+              <h3 class="font-medium">Bonsai Indian</h3>
+              <p class="font-semibold">$70</p>
+            </div>
+            <div>
+              <div
+                class="bg-accent pt-1 pl-3 rounded-xl w-[41px] h-[41px] mx-auto items-center align-middle justify-center hover:bg-primary transition-all duration-3000">
+                <i class="ri-shopping-cart-2-line text-white text-center"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Collection -->
+
+  <!-- Review-->
+  <section class="xl:bg-daunBg bg-grey py-12 xl:pt-0 xl:pb-12 overflow-hidden xl:h-[900px] bg-no-repeat bg-cover">
+    <div class="mt-[50px]" style="line-height: 27px;">
+      <p class="h2 mx-auto font-tertiary font-semibold text-center xl:text-white text-black">WHAT THEY SAY</p>
+      <p class="h2 mx-auto font-tertiary font-semibold text-center xl:text-white text-black mt-[20px]">Reviews 💬🌳</p>
+    </div>
+    <div class="mt-[20px]">
+      <p class="mx-auto font-secondary font-normal text-title xl:text-white text-center text-[14px] xl:text-[20px]">
+        Check out our collections, we got every plant you need here! Let’s grow it together!</p>
+    </div>
+
+    <div class="flex flex-col xl:flex-row">
+      <div class="mt-[100px] xl:ml-[130px] mx-auto container">
+        <div>
+          <div
+            class="xl:bg-white bg-primary shadow-custom1 -z-10 w-[280px] h-[361px] xl:w-[312px] xl:h-[461px] -mt-[40px] xl:mt-[20px] pt-[80px]"
+            style="border-radius: 111.141px 111.141px 20.839px 20.839px;">
+            <h1
+              class="mx-auto font-tertiary font-semibold xl:text-title text-white text-center xl:text-[28px] text-[24px] mt-[34px] xl:mt-[55px]">
+              Nathaniel</h1>
+          </div>
+          <div>
+            <img src="../assets/asset/nataniel.png" alt=""
+              class="w-[50%] absolute -mt-[415px] ml-[60px] xl:w-[13%] xl:-mt-[540px]">
+          </div>
+          <div class="justify-center items-center text-center xl:ml-5 xl:pl-7 ml-[20px] pl-[22px]">
+            <img src="../assets/asset/star rating.png" alt=""
+              class="w-[24%] absolute -mt-[200px] ml-[60px] xl:w-[6%] xl:-mt-[265px]">
+          </div>
+          <div>
+            <p
+              class="font-secondary text-center text-[14px] xl:text-title absolute -mt-[180px] ml-[40px] xl:-mt-[220px] text-white xl:ml-[60px]">
+              I bought my mom a plant from <br> this shop and she was very <br> happy because it was exactly <br> what
+              she wanted, she asked <br> me to buy it for her. 😊😊</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-[100px] mx-auto container">
+        <div>
+          <div
+            class="xl:bg-white bg-primary shadow-custom1 -z-10 w-[280px] h-[361px] xl:w-[312px] xl:h-[461px] -mt-[40px] xl:mt-[20px] pt-[80px]"
+            style="border-radius: 111.141px 111.141px 20.839px 20.839px;">
+            <h1
+              class="mx-auto font-tertiary font-semibold xl:text-title text-white text-center xl:text-[28px] text-[24px] mt-[34px] xl:mt-[55px]">
+              Regina C.</h1>
+          </div>
+          <div>
+            <img src="../assets/asset/regina.png" alt=""
+              class="w-[50%] absolute -mt-[415px] ml-[60px] xl:w-[13%] xl:-mt-[540px]">
+          </div>
+          <div class="justify-center items-center text-center xl:ml-5 xl:pl-7 ml-[20px] pl-[22px]">
+            <img src="../assets/asset/star rating.png" alt=""
+              class="w-[24%] absolute -mt-[200px] ml-[60px] xl:w-[6%] xl:-mt-[265px]">
+          </div>
+          <div>
+            <p
+              class="font-secondary text-center text-[14px] xl:text-title absolute -mt-[180px] ml-[40px] xl:-mt-[220px] text-white xl:ml-[60px]">
+              I love all kinds of plants that <br> are sold on peakcrops, very <br> beautiful and beautiful plants <br>
+              make me very happy!</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-[100px] mx-auto container">
+        <div>
+          <div
+            class="xl:bg-white bg-primary shadow-custom1 -z-10 w-[280px] h-[361px] xl:w-[312px] xl:h-[461px] -mt-[40px] xl:mt-[20px] pt-[80px]"
+            style="border-radius: 111.141px 111.141px 20.839px 20.839px;">
+            <h1
+              class="mx-auto font-tertiary font-semibold xl:text-title text-white text-center xl:text-[28px] text-[24px] mt-[34px] xl:mt-[55px]">
+              Elanna</h1>
+          </div>
+          <div>
+            <img src="../assets/asset/elanna.png" alt=""
+              class="w-[50%] absolute -mt-[415px] ml-[60px] xl:w-[13%] xl:-mt-[540px]">
+          </div>
+          <div class="justify-center items-center text-center xl:ml-5 xl:pl-7 ml-[20px] pl-[22px]">
+            <img src="../assets/asset/star rating.png" alt=""
+              class="w-[24%] absolute -mt-[200px] ml-[60px] xl:w-[6%] xl:-mt-[265px]">
+          </div>
+          <div>
+            <p
+              class="font-secondary text-center text-[14px] xl:text-title absolute -mt-[180px] ml-[40px] xl:-mt-[220px] text-white xl:ml-[60px]">
+              This plant is very beautiful to <br> complement my home, I really <br>
+              love it!🌱💞💞</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- End Review-->
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-wrap justify-between">
+
+        <div class="w-full sm:w-1/2 lg:w-1/4 mb-8 xl:mb-0">
+          <div class="flex justify-center lg:justify-normal mb-5">
+            <a href="" class="flex-col items-center px-[20px] w-max gap-x-2 mx-auto xl:mx-0">
+              <img src="../assets/asset/logo.svg" alt="PeakCrops" class="h-7 items-center mx-auto">
+              <div class="text-base text-title xl:text-[30px] text-[25px] tracking-[2.24px] font-semibold mt-1">
+                PeakCrops</div>
+            </a>
+          </div>
+
+          <p class="text-title font-secondary font-medium pr-[10px]">PeakCrops is ready to serve wholeheartedly for
+            purchases from any area, you must get the best 🌱.</p>
+          <div class="mt-6 space-x-3 xl:mt-8 flex sm:justify-start justify-center">
+            <a href="#"
+              class="flex justify-center items-center bg-[#FFC973] rounded-full w-[50px] h-[50px] hover:bg-primary transition-all duration-300 text-primary hover:text-white">
+              <i class="ri-instagram-line text-2xl"></i>
+            </a>
+            <a href="#"
+              class="flex justify-center items-center bg-[#FFC973] rounded-full w-[50px] h-[50px] hover:bg-primary transition-all duration-300 text-primary hover:text-white">
+              <i class="ri-twitter-x-line text-2xl"></i>
+            </a>
+            <a href="#"
+              class="flex justify-center items-center bg-[#FFC973] rounded-full w-[50px] h-[50px] hover:bg-primary transition-all duration-300 text-primary hover:text-white">
+              <i class="ri-facebook-line text-2xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="ml-6 mt-[26px]">
+          <h3 class="text-lg font-semibold font-tertiary text-title mb-4">Quick Links</h3>
+          <ul>
+            <li class="mb-2"><a href="#" class="text-title font-secondary hover:underline">Home</a></li>
+            <li class="mb-2"><a href="#" class="text-title font-secondary hover:underline">Plants</a></li>
+            <li class="mb-2"><a href="#" class="text-title font-secondary hover:underline">About</a></li>
+            <li class="mb-2"><a href="#" class="text-title font-secondary hover:underline">Collection</a></li>
+          </ul>
+        </div>
+
+        <div class="ml-6  mt-[26px]">
+          <h3 class="text-lg font-semibold font-tertiary text-title mb-5">About Us</h3>
+          <ul>
+            <li class="mb-2"><a href="#" class="text-title font-secondary hover:underline">Our Company</a></li>
+            <li class="mb-2"><a href="#" class="text-title font-secondary hover:underline">Privacy Policy</a></li>
+            <li class="mb-2"><a href="#" class="text-title font-secondary hover:underline">Product</a></li>
+            <li class="mb-2"><a href="#" class="text-title font-secondary hover:underline">How to buy</a></li>
+          </ul>
+        </div>
+
+        <div class="ml-6  mt-[26px]">
+          <h3 class="text-lg font-semibold font-tertiary text-title mb-5">Contact</h3>
+          <p class="font-secondary font-semibold text-title"><img src="../assets/asset/phone-icon.png" alt="Phone"
+              class="inline-block h-5 w-5 mr-2"> +211444222</p>
+          <p class="font-secondary font-semibold text-title"><img src="../assets/asset/email-icon.png" alt="Email"
+              class="inline-block h-5 w-5 mr-2 "> peakcrops@garden.com</p>
+          <p class="font-secondary font-semibold text-title">DutaBumi 111, Indonesia</p>
+          <p class="font-secondary font-semibold text-title">Bandar Jakarta, Dayeuh</p>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="border-t-2 border-primary"></div>
+    <div class="bg-gray-100 text-center py-4">
+      <p class="text-title font-secondary font-medium">&copy; 2024, All Right Reserved.</p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- My Script -->
+  <script src="main.js"></script>
+
+  <script src="dist/js/script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
